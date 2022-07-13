@@ -1,0 +1,9 @@
+.paginationContainer {
+    text-align: center;
+    margin: 20px 0 40px 0
+}
+
+.paginationContainer button {
+        margin: 0 5px;
+        border-radius: 3px;
+    }

@@ -1,0 +1,11 @@
+.headerContainer {
+    background-color: rgb(40, 37, 253);
+}
+
+.headerContainer h1 {
+    margin-left: 10px;
+    font-family: Hubballi;
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgb(25, 25, 25);
+}
