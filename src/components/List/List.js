@@ -42,6 +42,7 @@ const FormList = ({ videos, setVideos, onHandleShow }) => {
     closeModalHandler();
   };
   const videosPerPage = 10;
+  //Conditionally displaying pagination buttons
   const pagination = () => {
     if (
       (sortState !== "fav" && videos.length > videosPerPage) ||
@@ -79,6 +80,7 @@ const FormList = ({ videos, setVideos, onHandleShow }) => {
   return (
     <>
       <SortOptions
+        sortState={sortState}
         setSortState={setSortState}
         favVideos={favVideos}
         display={display}

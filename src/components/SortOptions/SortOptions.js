@@ -1,6 +1,7 @@
 import styles from "./sortOptions.module.css";
 
 const SortOptions = ({
+  sortState,
   setSortState,
   setDisplay,
   setFirstItemOnPage,
@@ -21,12 +22,25 @@ const SortOptions = ({
     <div className={styles.optionsListWrapper}>
       <div>
         <span>Pokaż:</span>
-        <button onClick={() => sortStateSwitcher("oldest")}>Najstarsze</button>
-        <button onClick={() => sortStateSwitcher("latest")}>
+        <button
+          className={`${sortState === "oldest" && styles.blue}`}
+          onClick={() => sortStateSwitcher("oldest")}
+        >
+          Najstarsze
+        </button>
+        <button
+          className={`${sortState === "latest" && styles.blue}`}
+          onClick={() => sortStateSwitcher("latest")}
+        >
           Ostatnio dodane
         </button>
         {favVideos.length > 0 && (
-          <button onClick={() => sortStateSwitcher("fav")}>Ulubione</button>
+          <button
+            className={`${sortState === "fav" && styles.red}`}
+            onClick={() => sortStateSwitcher("fav")}
+          >
+            Ulubione
+          </button>
         )}
       </div>
       <div>
